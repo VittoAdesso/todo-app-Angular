@@ -79,3 +79,33 @@
     }
 }
 
+.todo-item .todo-control-box {
+    position: absolute;
+    // bottom: 0; 
+    right: 400px;
+
+    display: flex;
+
+    //hidding by defeault
+    opacity: 0;
+    visibility: hidden;
+}
+
+.todo-item:hover .todo-control-box{
+    opacity: 1;
+    visibility: visible;
+}
+
+.todo-control-box .todo-control-button {
+    padding: 0 10px; 
+    
+    i.material-icons{
+        font-size: 20px ;
+        background: #eee;
+        border-radius: 7px;
+    }
+}
+
+.todo-control-box .todo-control-button.is-danger:hover i.material-icons{
+    color: red; 
+}
