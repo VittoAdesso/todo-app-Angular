@@ -4,19 +4,21 @@
 
 <div class="container">
     <div class="add-todo-box">
-        <form>
+
+        <form #form="ngForm" (ngSubmit)='onFormSubmit(form)'>
             <h2 class="title is-5">New Task 👨‍💻</h2>
             <div class="field is-grouped">
                 <p class="control is-expanded">
-                <input class="input" type="text" placeholder="Type tasks here 🏗️"></p>
+                <input ngModel name="text" class="input" type="text" placeholder="Type tasks here 🏗️"></p>
                 <p class="control">
-                <button class="button alt-gardient-button">
+                <button type="submit" class="button alt-gardient-button">
                     <i class="material-icons">add_circle</i>
                     Add
                 </button>
                 </p>
             </div>
-        </form>
+        </form>        
+
     </div>
 </div>
 
