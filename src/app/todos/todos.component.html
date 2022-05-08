@@ -9,7 +9,8 @@
             <h2 class="title is-5">New Task 👨‍💻</h2>
             <div class="field is-grouped">
                 <p class="control is-expanded">
-                <input ngModel name="text" class="input" type="text" placeholder="Type tasks here 🏗️"></p>
+                    <!-- #todoTextField is a variable of form -->
+                <input ngModel #todoTextField="ngModel" required minlength="2" name="text" class="input" type="text" placeholder="Type tasks here 🏗️"></p>
                 <p class="control">
                 <button type="submit" class="button alt-gardient-button">
                     <i class="material-icons">add_circle</i>
@@ -17,30 +18,21 @@
                 </button>
                 </p>
             </div>
+                <p class="help is-danger" *ngIf="todoTextField.invalid">Please enter your task of your TODO 📌</p>
+                <p class="help is-danger" *ngIf="todoTextField.invalid">Task have almost 2 characters </p>
         </form>        
-
     </div>
 </div>
 
 <div class="section">
     <div class="conrtainer">
-        <div class="todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
-            <div class="check-box">
-                <i class="material-icons">check</i>
-            </div>
-            <div class="todo-text">
-                {{ todo.text }}
-            </div>
+    <app-todo-item *ngFor="let todo of todos" 
+    [todo]="todo" 
+    (todoClicked)="toggleCompleted(todo)"
+    (editClicked)="editTodo(todo)"
+    (deleteClicked)="deleteTodo(todo)"
 
-            <div class="todo-control-box">
-                <div class="todo-control-button">
-                    <i class="material-icons">edit</i>
-                </div>
-                <div class="todo-control-button is-danger">
-                    <i class="material-icons">delete</i>
-                </div>
-            </div>
-            
-        </div>
+    >
+    </app-todo-item>
     </div>
 </div>
