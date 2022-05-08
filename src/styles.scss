@@ -1,6 +1,11 @@
 // Bulma: the modern CSS framework that just works.
 @import '../node_modules/bulma/bulma.sass'; 
 
+@import '@angular/material/prebuilt-themes/purple-green.css'; 
+
+html, body { height: 100%; }
+body { margin: 0; }
+
 .alt-gardient-button {
     border: none !important;
     background: linear-gradient(rgb(0, 0, 0),rgb(117, 117, 115)); 
@@ -16,3 +21,4 @@
         margin-right: 10px;
     }
 }
+
