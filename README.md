@@ -1,6 +1,11 @@
 # AngularTodoApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+
+## Application preview
+
+<img src="./src/assets/1.png" with=100>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -20,3 +25,5 @@ Bulma... the modern CSS framework that just works.
 Material Ui
 
 `https://mui.com/`
+
+
