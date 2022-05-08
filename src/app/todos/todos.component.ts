@@ -36,6 +36,7 @@ export class TodosComponent implements OnInit {
 
     let dialogRef = this.dialog.open(EditTodoDialogComponent, {
       width: '700px',
+      // to pass same text into task for the edit
       data: todo
     });
 
